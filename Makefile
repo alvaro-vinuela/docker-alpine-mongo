@@ -1,5 +1,5 @@
-VERSION = 4.0.6-1
-IMAGE = avinuela/alpine-mongo:$(VERSION)
+VERSION = latest
+IMAGE = alvarovinuela/alpine-mongo:$(VERSION)
 
 all:
 

@@ -12,24 +12,24 @@ As a prerequisite, you need [Docker](https://docker.com) to be installed.
 
 To download this image from the public docker hub:
 
-	$ docker pull mvertes/alpine-mongo
+	$ docker pull alvarovinuela/alpine-mongo
 
 To re-build this image from the dockerfile:
 
-	$ docker build -t mvertes/alpine-mongo .
+	$ docker build -t alvarovinuela/alpine-mongo .
 
 ## Usage
 
 To run `mongod`:
 
-	$ docker run -d --name mongo -p 27017:27017 mvertes/alpine-mongo
+	$ docker run -d --name mongo -p 27017:27017 alvarovinuela/alpine-mongo
 
 You can also specify the database repository where to store the data
 with the volume -v option:
 
     $ docker run -d --name mongo -p 27017:27017 \
 	  -v /somewhere/onmyhost/mydatabase:/data/db \
-	  mvertes/alpine-mongo
+	  alvarovinuela/alpine-mongo
 
 To run a shell session:
 
@@ -48,3 +48,8 @@ The mongo shell client can also be run its own container:
 - On MacOSX, volumes located in a virtualbox shared folder are not
   supported, due to a limitation of virtualbox (default docker-machine
   driver) not supporting fsync().
+
+
+## Thanks
+
+To Marc Vertes repository (mvertes/alpine-mongo)
